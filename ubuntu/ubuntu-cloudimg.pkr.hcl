@@ -135,17 +135,17 @@ build {
 
   provisioner "shell" {
     environment_vars  = ["DEBIAN_FRONTEND=noninteractive"]
-    scripts           = ["k3s/k3s-install.sh"]
+    scripts           = "k3s/k3s-install.sh"
   }
 
   provisioner "file" {
-    destination = ["/etc/systemd/system/"]
-    sources     = ["k3s/k3s.service"]
+    destination = "/etc/systemd/system/"
+    sources     = "k3s/k3s.service"
   }
 
   provisioner "file" {
-    destination = ["/usr/local/bin/k3s-start.sh"]
-    source      = ["k3s/k3s-start.sh"]
+    destination = "/usr/local/bin/k3s-start.sh"
+    source      = "k3s/k3s-start.sh"
   }
 
   provisioner "shell" {
