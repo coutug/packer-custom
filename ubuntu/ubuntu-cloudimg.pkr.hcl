@@ -122,7 +122,7 @@ build {
 
   provisioner "file" {
     destination = "/tmp/"
-    sources     = ["${path.root}/scripts/cloudimg/curtin-hooks"]
+    sources     = "${path.root}/scripts/cloudimg/curtin-hooks"
   }
 
   provisioner "shell" {
@@ -140,7 +140,7 @@ build {
 
   provisioner "file" {
     destination = "/etc/systemd/system/"
-    sources     = ["k3s/k3s.service"]
+    sources     = "k3s/k3s.service"
   }
 
   provisioner "file" {
