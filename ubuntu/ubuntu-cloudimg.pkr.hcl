@@ -172,8 +172,8 @@ build {
       "SOURCE=cloudimg",
       "ROOT_PARTITION=1",
       "OUTPUT=${var.filename}",
-      "source ../scripts/fuse-nbd",
-      "source ../scripts/fuse-tar-root"
+      "source scripts/fuse-nbd",
+      "source scripts/fuse-tar-root"
     ]
     inline_shebang = "/bin/bash -e"
   }
