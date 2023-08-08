@@ -139,12 +139,12 @@ build {
   }
 
   provisioner "file" {
-    destination = ["/etc/systemd/system/"]
+    destination = "/etc/systemd/system/"
     sources     = ["k3s/k3s.service"]
   }
 
   provisioner "file" {
-    destination = ["/usr/local/bin/k3s-start.sh"]
+    destination = "/usr/local/bin/k3s-start.sh"
     source      = ["k3s/k3s-start.sh"]
   }
 
